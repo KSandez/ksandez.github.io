@@ -7,70 +7,130 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesbootswatch.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="index.html">Latitude Analysis Dashboard with Attitude</a>
-          
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-          
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Visualizations 
-                      </a>
-                      <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
-                      <a class="dropdown-item" href="humidity.html">Humidity</a>
-                      <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-                      <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="comparison.html">Comparison</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="dataset.html">Data</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Latitude Analysis</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse show" id="navbarSupportedContent" style="">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Visualizations
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
+            <a class="dropdown-item" href="humidity.html">Humidity</a>
+            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+            <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dataset.html">Data</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+
 
 
   <div class="container">
-    
+
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-12 col-md-8" align="center">
         <h1>Wind Speed 🌪️</h1>
-<br></br>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <p>Here I'm writing some summary about a visual for Wind Speed</p>
         <br></br>
-        <img src = "Resources/assets/images/Fig4.png">
+        <p>
+          <img src="Resources/assets/images/Fig4.png" class='img-fluid float-left' width="200">Presented in a dashboard, the goal of this project was to analyze how weather changes as you get closer to the
+          equator. To accomplish this analysis, information was pulled from the OpenWeatherMap API to gather a dataset on
+          over 500 random cities throughout the global.</p>
+        <p> After assembling the dataset, we used Matplotlib to plot various aspects of the weather in that city against it's
+          latitude and longitude coordinates. Factors we analyzed against the latitude included temperature, cloudiness,
+          wind speed, and humidity. This dashboard provides the source data and the visualizations created as part of this
+          analysis, as well as explanations and descriptions of any trends or correlations identified.</p>
+
+      </div>
+
+
+      <div class="col-12 col-md-4" align="Center">
+        <h1>Visualizations 📊</h1>
+        <br></br>
+        <div class="row">
+          <div class="col">
+            <a href="maxtemp.html" title="Visualization compared to Max Temperature">
+              <img src="Resources/assets/images/Fig1.png" class='img-thumbnail'>
+            </a>
+          </div>
+          <br></br>
+          <div class="col">
+            <a href="humidity.html" title="Visualization compared to Humidity">
+              <img src="Resources/assets/images/Fig2.png" class='img-thumbnail'>
+            </a>
+          </div>
         </div>
-      <div class="col-12 col-md-6">
-        <p> After assembling the dataset, we used Matplotlib to plot various aspects of the weather in that city against the latitude. Factors we analyzed against the latitude included temperature, cloudiness, wind speed, and humidity. This site provides the source data and the visualizations created as part of this analysis, as well as explanations and descriptions of any trends or correlations identified.</p>
+
+        <div class="row">
+          <div class="col">
+            <a href="cloudiness.html" title="Visualization compared to Cloudiness">
+              <img src="Resources/assets/images/Fig3.png" class='img-thumbnail'>
+            </a>
+          </div>
+          <br></br>
+          <div class="col">
+            <a href="windspeed.html" title="Visualization compared to Wind Speed">
+              <img src="Resources/assets/images/Fig4.png" class='img-thumbnail'>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </body>
+
 <br></br>
+
 <footer>
-  <ul>
-    <li><strong>Email: </strong> <a href="mailto:krystal.sandez@gmail.com"><strong>Krystal.Sandez@gmail.com</strong></a></li>
-    <li><strong>GitHub: <a href="https://github.com/KSandez">github.com/KSandez/</a></li>
-    <li><strong>Linkedin: </strong> <a href="www.linkedin.com/in/krystalsandez/">linkedin.com/in/krystalsandez</a></li>
-  </ul>
+  <div class="container">
+    <div class="col-12">
+      <p>
+        <strong>Email:
+          <a href="mailto:krystal.sandez@gmail.com">Krystal.Sandez@gmail.com</strong>
+        </a>
+      </p>
+      <p>
+        <strong>GitHub:
+          <a href="https://github.com/KSandez">github.com/KSandez/</a>
+        </strong>
+      </p>
+      <p>
+        <strong>Linkedin:
+          <a href="www.linkedin.com/in/krystalsandez/">linkedin.com/in/krystalsandez</a>
+        </strong>
+      </p>
+    </div>
+  </div>
+  </div>
+  <br></br>
 </footer>
+
 </html>
