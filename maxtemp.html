@@ -3,12 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>KSandez Bootstrap Visualizations</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="stylesbootswatch.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,7 +26,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse collapse show" id="navbarSupportedContent" style="">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="">
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item dropdown">
@@ -45,14 +50,6 @@
       </ul>
     </div>
   </nav>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
-
-
 
   <div class="container">
 
@@ -61,13 +58,15 @@
         <h1>Max Temperature 🌡️</h1>
         <br></br>
         <p>
-          <img src="Resources/assets/images/Fig1.png" class='img-fluid float-left' width="200">Presented in a dashboard, the goal of this project was to analyze how weather changes as you get closer to the
-          equator. To accomplish this analysis, information was pulled from the OpenWeatherMap API to gather a dataset on
-          over 500 random cities throughout the global.</p>
-        <p> After assembling the dataset, we used Matplotlib to plot various aspects of the weather in that city against it's
-          latitude and longitude coordinates. Factors we analyzed against the latitude included temperature, cloudiness,
-          wind speed, and humidity. This dashboard provides the source data and the visualizations created as part of this
-          analysis, as well as explanations and descriptions of any trends or correlations identified.</p>
+          <img src="Resources/assets/images/Fig1.png" class='img-fluid' width="550">
+        </p>
+        <p>Observed trend:</p>
+        <p>The closer to the equator a city is, the hotter the temperature would be, with averaging temperatures ranging from
+          70-95 degrees. The equator is displayed as 0 degrees latitue.
+        </p>
+        <p>Cities in the southern hemisphere have hotter temperature maximums than the northern hemisphere due to that the 
+          information was collected in early January, which is the winter season where the northern hemisphere would not experience
+        higher temperatures. </p>
 
       </div>
 
@@ -76,7 +75,7 @@
         <h1>Visualizations 📊</h1>
         <br></br>
         <div class="row">
-          <div class="col">
+          <div class="col" style="border:2px solid #009CDC; border-radius:10px;">
             <a href="maxtemp.html" title="Visualization compared to Max Temperature">
               <img src="Resources/assets/images/Fig1.png" class='img-thumbnail'>
             </a>
